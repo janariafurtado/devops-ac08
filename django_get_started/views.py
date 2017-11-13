@@ -35,30 +35,97 @@ def contato(request):
         })
     )
 
-def about(request):
+def cadastro(request):
     """Renders the about page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/about.html',
+        'app/cadastro.html',
         context_instance = RequestContext(request,
         {
-            'title':'About',
-            'message':'Gerenciador de vestibulares',
             'year':datetime.now().year,
         })
     )
 
-def cadastro_cursos(request):
+def detalhe_curso(request):
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/cadastro_cursos.html',
+        'app/detalhe_curso.html',
         context_instance = RequestContext(request,
         {
-            'title':'Cadastro de cursos',
-#            'cursos': ['ADS' , 'SI', 'CC'],
-            'cursos': Curso.objects.all(),
+            'year':datetime.now().year,
+        })
+    )
+
+def disciplinas(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/disciplinas.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
+def esquecisenha(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/esquecisenha.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
+def lista_cursos(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/lista_cursos.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
+def login(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/login.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
+def noticias(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/noticias.html',
+        context_instance = RequestContext(request,
+        {
+            'year':datetime.now().year,
+        })
+    )
+
+def novadisciplina(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/novadisciplina.html',
+        context_instance = RequestContext(request,
+        {
             'year':datetime.now().year,
         })
     )
