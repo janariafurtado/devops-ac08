@@ -20,6 +20,7 @@ def home(request):
             'year':datetime.now().year,
         })
     )
+	
 
 def contato(request):
     """Renders the contact page."""
