@@ -21,16 +21,14 @@ def home(request):
         })
     )
 
-def contact(request):
+def contato(request):
     """Renders the contact page."""
     assert isinstance(request, HttpRequest)
     return render(
         request,
-        'app/contact.html',
+        'app/contato.html',
         context_instance = RequestContext(request,
         {
-            'title':'Contato',
-            'message':'Entre em contato conosco',
             'year':datetime.now().year,
         })
     )
